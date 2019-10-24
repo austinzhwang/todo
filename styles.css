@@ -1,0 +1,90 @@
+html {
+    font-family: sans-serif;
+    min-height: 100%; 
+    background-image: linear-gradient(#ff6161,#fa3a57); 
+    background-repeat: no-repeat;
+    background-size: auto; 
+} 
+
+h1 { 
+    text-align: center;
+    color: #fff;
+    padding: 15px;
+    letter-spacing: 2px;
+}
+
+.todo-container { 
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+form {
+    background-color: #fff;
+    padding: 15px;
+}
+
+input[type="text"] {
+    width: 310px;
+    height: 30px;
+    outline: 0;
+    border: none;
+    font-size: 1.5em;
+    background: #fff;
+    color: #2f4f4f;
+}
+
+button {
+    font-size: 1.5em;
+    color: #53BDFF;
+    background-color: #fff;
+    outline: 0;
+    border: none;
+    width: 50px;
+    cursor: pointer;
+  
+}
+
+.tasks {
+    background-color: #fff;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 40px;
+    display: none;
+}
+
+ul {
+    list-style: none;
+    color: #fff;
+}
+
+li {
+    border-bottom: 1px solid #53BDFF;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-size: 1.3em;
+    color: #2f4f4f;
+}
+
+.done .text {
+    text-decoration: line-through; 
+} 
+
+.delete {
+    background-color: #ff6161;
+    padding: 0px 5px 0px 5px;
+    color: #fff;
+    cursor: pointer;
+    float: right;
+}
+
+#clear {
+    float: right;
+    text-align: right;
+    color: #ff6161;
+    font-size: 1.2em;
+    cursor: pointer;
+}
