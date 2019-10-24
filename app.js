@@ -14,7 +14,7 @@ function add(text) {
     const list = document.querySelector('.todo-list');
     list.insertAdjacentHTML('beforeend', `
       <li class="todo-item" data-key="${todo.id}">
-        <input id="${todo.id}" type="checkbox"/>
+        <input id="${todo.id}" class="tick" type="checkbox"/>
         <label for="${todo.id}" class="tick-complete"></label>
         <span class="text">${todo.text}</span>
         <span class="delete">×</span></li>
@@ -73,8 +73,10 @@ function deleteTodo(key) {
 const list = document.querySelector('.todo-list');
 list.addEventListener('click', event => {
 
-    const itemKey = event.target.parentElement.dataset.key;
-    toggleDone(itemKey);
+    if (event.target.classList.contains('tick')) {  
+        const itemKey = event.target.parentElement.dataset.key;
+        toggleDone(itemKey);
+    }
 
     if (event.target.classList.contains('delete')) {
         const itemKey = event.target.parentElement.dataset.key;
@@ -94,7 +96,6 @@ function clear() {
 }
 
 const clearList = document.getElementById('clear'); 
-
 clearList.addEventListener('click', event => {
     event.preventDefault();
     clear(); 

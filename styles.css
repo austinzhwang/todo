@@ -81,6 +81,14 @@ li {
     float: right;
 }
 
+#save {
+    float: left;
+    text-align: left;
+    cursor: pointer;
+    color: #53BDFF;
+    font-size: 1.2em;
+}
+
 #clear {
     float: right;
     text-align: right;
